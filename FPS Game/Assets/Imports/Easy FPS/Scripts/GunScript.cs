@@ -93,13 +93,10 @@ public class GunScript : MonoBehaviour {
 
     
     void Update(){
-		//Debug.Log(ammoUpdated);
+		
 		if (ammoUpdated)
         {
-			
-			Debug.Log("Found");
 			bulletsIHave = 200;
-			//ammoUpdated = false;
 			ammoUpdated = false;
 			
         }
@@ -116,7 +113,7 @@ public class GunScript : MonoBehaviour {
 		MeeleAttack();
 		LockCameraWhileMelee ();
 
-		Sprint(); //iff we have the gun you sprint from here, if we are gunless then its called from movement script
+		Sprint(); //if we have the gun you sprint from here, if we are gunless then its called from movement script
 
 		CrossHairExpansionWhenWalking();
 

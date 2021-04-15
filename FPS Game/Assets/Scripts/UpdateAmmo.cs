@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UpdateAmmo : MonoBehaviour
 {
-
-
     private GunScript gunScript;
 
     private void Start()
@@ -16,13 +14,9 @@ public class UpdateAmmo : MonoBehaviour
     {
         if (other.gameObject.tag == "Ammo")
         {
-            
-            
-            
             gunScript.updateAmmo(100);
             Destroy(other.gameObject);
-            
-            
+
         }
     }
 }
