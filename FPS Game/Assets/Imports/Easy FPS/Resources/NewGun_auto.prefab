@@ -2284,6 +2284,8 @@ MonoBehaviour:
   bulletsIHave: 200
   bulletsInTheGun: 20
   amountOfBulletsPerLoad: 20
+  test: 123
+  ammoUpdated: 0
   currentGunPosition: {x: 0, y: 0, z: 0}
   restPlacePosition: {x: -0.07, y: -0.06, z: 0.42}
   aimPlacePosition: {x: 0, y: -0.03, z: 0.3}

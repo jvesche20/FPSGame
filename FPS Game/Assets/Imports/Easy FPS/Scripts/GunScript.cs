@@ -20,7 +20,7 @@ public class GunScript : MonoBehaviour {
 
 	[Header("Bullet properties")]
 	[Tooltip("Preset value to tell with how many bullets will our waepon spawn aside.")]
-	public float bulletsIHave = 20;
+	public float bulletsIHave = 200;
 	[Tooltip("Preset value to tell with how much bullets will our waepon spawn inside rifle.")]
 	public float bulletsInTheGun = 5;
 	[Tooltip("Preset value to tell how much bullets can one magazine carry.")]
@@ -32,6 +32,9 @@ public class GunScript : MonoBehaviour {
 
 	private PlayerMovementScript pmS;
 
+	public float test = 10;
+
+	public static bool ammoUpdated;
 	/*
 	 * Collection the variables upon awake that we need.
 	 */
@@ -56,7 +59,14 @@ public class GunScript : MonoBehaviour {
 		rotationLastX= mls.currentCameraXRotation;
 
 	}
-
+	
+	public void updateAmmo(float ammoAmt)
+    {
+		Debug.Log("CALLED");
+		test += ammoAmt;
+		ammoUpdated = true;
+		Debug.Log(ammoUpdated);
+	}
 
 	[HideInInspector]
 	public Vector3 currentGunPosition;
@@ -77,11 +87,25 @@ public class GunScript : MonoBehaviour {
 
 	private Vector2 gunFollowTimeVelocity;
 
-	/*
+    /*
 	Update loop calling for methods that are descriped below where they are initiated.
 	*/
-	void Update(){
 
+    
+    void Update(){
+		//Debug.Log(ammoUpdated);
+		if (ammoUpdated)
+        {
+			
+			Debug.Log("Found");
+			bulletsIHave = 200;
+			//ammoUpdated = false;
+			ammoUpdated = false;
+			
+        }
+
+		
+		
 		Animations();
 
 		GiveCameraScriptMySensitvity();

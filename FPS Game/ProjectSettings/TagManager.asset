@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LevelPart
+  - SecondCamera
+  - BulletSpawn
+  - Enemy
+  - Dummie
+  - Ammo
+  - Weapon
   layers:
   - Default
   - TransparentFX
