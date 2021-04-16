@@ -37,13 +37,13 @@ public class EnemyScript : MonoBehaviour
                     pursuing = true;
                     target = hit.transform.gameObject;
                 }
-                Debug.Log("I see something");
+                //Debug.Log("I see something");
 
             }
         }
         else
         {
-            Debug.Log(target.name);
+            //Debug.Log(target.name);
             pathfinding.SetDestination(target.transform.position);
         }
     }

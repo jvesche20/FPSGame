@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3107790366275881286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054605840149281024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ce922535f5a034a9761052c5633ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathfinding: {fileID: 0}
+  muzzle: {fileID: 0}
+  projectle: {fileID: 0}
+  visionRange: 0
+  eyes: {fileID: 0}
+  pursuing: 0
+  range: 3
+--- !u!65 &1949015245839556641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054605840149281024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.91, z: 1.46}
+  m_Center: {x: 0, y: 1.01, z: 0.54}
+--- !u!65 &3113837092500583660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054605840216157144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2911797, y: 1.3027449, z: 0.14509302}
+  m_Center: {x: -0.00022466839, y: 0.4403875, z: -0.00000006434567}
 --- !u!1 &3107790364978709149
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,25 +106,6 @@ Transform:
   m_Father: {fileID: 3107790366754641010}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3107790366275881286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3054605840149281024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ce922535f5a034a9761052c5633ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathfinding: {fileID: 0}
-  muzzle: {fileID: 0}
-  projectle: {fileID: 0}
-  visionRange: 0
-  eyes: {fileID: 0}
-  pursuing: 0
-  range: 3
 --- !u!1 &3107790366754641011
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,8 +132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3107790366754641011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.051, y: 0.33851, z: 5.1382}
+  m_LocalScale: {x: 0.61810195, y: 0.61810195, z: 0.61810195}
   m_Children:
   - {fileID: 3107790364978709148}
   - {fileID: 3107790365837925641}
@@ -222,11 +248,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield-Attacks
       objectReference: {fileID: 0}
+    - target: {fileID: 91537696499171573, guid: 8526fc62d267e704aabe14dd3ca9d7ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dummie
+      objectReference: {fileID: 0}
     - target: {fileID: 91537696508703369, guid: 8526fc62d267e704aabe14dd3ca9d7ed,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bbc979b0acea15b46baed65de61b56e6, type: 2}
+    - target: {fileID: 91537697237144109, guid: 8526fc62d267e704aabe14dd3ca9d7ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dummie
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8526fc62d267e704aabe14dd3ca9d7ed, type: 3}
 --- !u!1 &3054605840149281024 stripped
@@ -238,6 +274,12 @@ GameObject:
 --- !u!4 &3054605840148980960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 91537696499146005, guid: 8526fc62d267e704aabe14dd3ca9d7ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 3107790365257267701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3054605840216157144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 91537697237144109, guid: 8526fc62d267e704aabe14dd3ca9d7ed,
     type: 3}
   m_PrefabInstance: {fileID: 3107790365257267701}
   m_PrefabAsset: {fileID: 0}
