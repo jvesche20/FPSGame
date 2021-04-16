@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     public bool pursuing = false;
     private GameObject target;
 
-
+    public float range = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,4 +47,5 @@ public class EnemyScript : MonoBehaviour
             pathfinding.SetDestination(target.transform.position);
         }
     }
+    
 }
